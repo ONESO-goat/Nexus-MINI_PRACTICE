@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Modern Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nexus</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html" class="btn btn-outline">Sign Up</a></li>
+                <li><a href="login.html" class="btn btn-primary">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Future of Digital Experience</h1>
+            <p>Transform your workflow with our cutting-edge platform. Seamlessly integrate, collaborate, and innovate with tools designed for the modern era.</p>
+            <div class="hero-buttons">
+                <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+                <a href="login.html" class="btn btn-outline">Sign In</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Powerful Features Built for You</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Experience blazing-fast performance with our optimized infrastructure. Every interaction is smooth, responsive, and instantaneous.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure by Design</h3>
+                <p>Enterprise-grade security protecting your data with end-to-end encryption, advanced authentication, and regular security audits.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Interface</h3>
+                <p>Crafted with attention to detail, our interface combines aesthetics with functionality for an exceptional user experience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Advanced Analytics</h3>
+                <p>Gain deep insights with comprehensive analytics and reporting tools. Make data-driven decisions with confidence.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Cloud Integration</h3>
+                <p>Seamlessly connect with your favorite cloud services. Work from anywhere with full synchronization across all devices.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Team Collaboration</h3>
+                <p>Collaborate in real-time with your team. Share, communicate, and build together with powerful collaboration tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

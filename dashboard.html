@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nexus</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="dashboard.html" class="logo">Nexus</a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#" onclick="handleLogout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <div class="dashboard-header-content">
+                <div class="user-welcome">
+                    <div>
+                        <h1>Welcome back, User!</h1>
+                        <p>Here's what's happening with your account today</p>
+                    </div>
+                    <div class="user-actions">
+                        <button class="btn btn-primary">New Project</button>
+                        <button class="btn btn-secondary">Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Statistics Cards -->
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon">📈</div>
+                        <span class="stat-trend up">↑ 12%</span>
+                    </div>
+                    <div class="stat-value">2,543</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon">👥</div>
+                        <span class="stat-trend up">↑ 8%</span>
+                    </div>
+                    <div class="stat-value">847</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon">⚡</div>
+                        <span class="stat-trend down">↓ 3%</span>
+                    </div>
+                    <div class="stat-value">94.5%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-icon">💰</div>
+                        <span class="stat-trend up">↑ 24%</span>
+                    </div>
+                    <div class="stat-value">$45.2K</div>
+                    <div class="stat-label">Revenue</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Activity</h2>
+                    <a href="#" class="btn btn-secondary">View All</a>
+                </div>
+                
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">📝</div>
+                        <div class="activity-details">
+                            <div class="activity-title">New project created</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-details">
+                            <div class="activity-title">Team member added to workspace</div>
+                            <div class="activity-time">5 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">✅</div>
+                        <div class="activity-details">
+                            <div class="activity-title">Task completed: API Integration</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">🔔</div>
+                        <div class="activity-details">
+                            <div class="activity-title">System update deployed</div>
+                            <div class="activity-time">2 days ago</div>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon">📊</div>
+                        <div class="activity-details">
+                            <div class="activity-title">Monthly report generated</div>
+                            <div class="activity-time">3 days ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Quick Actions</h2>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📁</div>
+                        <h3>Create Project</h3>
+                        <p>Start a new project with your team and begin collaborating immediately.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Invite Team</h3>
+                        <p>Add team members to your workspace and assign roles and permissions.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>View Reports</h3>
+                        <p>Access detailed analytics and insights about your projects and team performance.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Settings</h3>
+                        <p>Customize your workspace preferences, integrations, and security settings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Handle logout (placeholder - connect to your backend)
+        function handleLogout() {
+            // TODO: Call your backend logout endpoint
+            console.log('Logging out...');
+            alert('Logout functionality - connect to your backend!');
+            
+            // Redirect to home page after logout
+            // window.location.href = 'index.html';
+        }
+
+        // Placeholder: Check if user is authenticated
+        // In production, your backend would handle this
+        // For now, this is just a front-end placeholder
+        function checkAuth() {
+            // TODO: Verify authentication with your backend
+            // If not authenticated, redirect to login
+            // Example: if (!isAuthenticated) { window.location.href = 'login.html'; }
+        }
+
+        // Check authentication on page load
+        checkAuth();
+    </script>
+</body>
+</html>
